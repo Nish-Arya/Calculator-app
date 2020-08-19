@@ -55,12 +55,13 @@ class Calculator extends React.Component {
   }
 
   render () {
+    const { num1, num2, result } = this.state;
     return (
       <div>
         <div>
-          <h1>Result: {this.state.result}</h1>
-          <input onChange={this.handleFirstNum} placeholder="First Number" value={this.state.num1}/>
-          <input onChange={this.handleSecondNum} placeholder="Second Number" value={this.state.num2}/>
+          <h1>Result: {result}</h1>
+          <input onChange={this.handleFirstNum} placeholder="First Number" value={num1}/>
+          <input onChange={this.handleSecondNum} placeholder="Second Number" value={num2}/>
           <button onClick={this.clearInput}>Clear</button>
         </div>
         <div>
